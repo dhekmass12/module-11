@@ -12,17 +12,17 @@ spec:
   allocateLoadBalancerNodePorts: true
   clusterIP: 10.103.177.90
   clusterIPs:
-  - 10.103.177.90
+    - 10.103.177.90
   externalTrafficPolicy: Cluster
   internalTrafficPolicy: Cluster
   ipFamilies:
-  - IPv4
+    - IPv4
   ipFamilyPolicy: SingleStack
   ports:
-  - nodePort: 31732
-    port: 9966
-    protocol: TCP
-    targetPort: 9966
+    - nodePort: 31732
+      port: 9966
+      protocol: TCP
+      targetPort: 9966
   selector:
     app: spring-petclinic-rest
   sessionAffinity: None

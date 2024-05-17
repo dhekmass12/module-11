@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-05-17T12:36:15Z"
+  labels:
+    app: spring-petclinic-rest-with-recreate-strategy
+  name: spring-petclinic-rest-with-recreate-strategy
+  namespace: default
+  resourceVersion: "10118"
+  uid: 16c0023f-47b8-4e48-af55-13513e38331b
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.99.142.10
+  clusterIPs:
+  - 10.99.142.10
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30477
+    port: 9966
+    protocol: TCP
+    targetPort: 9966
+  selector:
+    app: spring-petclinic-rest-with-recreate-strategy
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
